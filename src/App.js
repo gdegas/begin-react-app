@@ -9,6 +9,7 @@ const App = () => {
   useEffect(() => {
     async function fetchData () {
       try {
+        console.log('fetching..')
         let data = await (await fetch('/api')).json()
         setMessage(data.message)
       } catch (err) {
